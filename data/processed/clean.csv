@@ -1,0 +1,17 @@
+record_id,customer_id,domain,service,billing_cycle_months,amount_pkr,registered_on,renews_on,status,contact_email
+SYN-001,C100,example.com,Shared Hosting,12,2500,2024-01-15,2025-12-25,active,alice@example.com
+SYN-002,C101,shop.example.com,VPS,3,2500,2024-01-15,2025-12-25,active,bob@example.com
+SYN-003,C102,blog.example.com,Domain Registration,12,2500,2024-03-01,2025-11-30,active,carol@example.com
+SYN-004,C103,example.org,SSL Certificate,12,2500,2024-06-01,2025-06-05,active,dave@example.com
+SYN-007,C106,refund.example,Shared Hosting,12,-2500,2024-05-01,2025-10-15,active,grace@example.com
+SYN-010,C109,messy-domain.co.uk,Reseller Hosting,12,3200,2024-07-01,2025-12-01,active,judy@example.com
+SYN-012,C111,dup.example.com,Shared Hosting,12,2000,2024-01-01,2025-09-10,active,leo@example.com
+SYN-016,C113,cancelled.example,Shared Hosting,12,1500,2024-03-01,2025-08-10,cancelled,nina@example.com
+SYN-017,C114,suspended.example,VPS,3,3000,2024-04-01,2025-08-18,suspended,oscar@example.com
+SYN-018,C115,email-bad.example,Shared Hosting,12,2200,2024-05-01,2025-09-05,active,
+SYN-019,C116,email-blank.example,Shared Hosting,12,2100,2024-05-15,2025-09-12,active,
+SYN-021,C117,ok-plain.example,Email Hosting,12,2500,2024-07-01,2025-11-01,active,quinn@example.com
+SYN-022,C118,negative-sign.example,Shared Hosting,12,-1500,2024-08-01,2025-10-01,active,rita@example.com
+SYN-023,C119,window-ok.example,Shared Hosting,12,4800,2025-01-10,2026-08-15,active,sam@example.com
+SYN-024,C120,window-cancel.example,VPS,12,6000,2025-02-01,2026-08-20,cancelled,tina@example.com
+SYN-025,C121,window-refund.example,Shared Hosting,12,-1200,2025-03-01,2026-08-25,active,uma@example.com

@@ -1,0 +1,26 @@
+record_id,customer_id,domain,service,billing_cycle_months,amount,registered_on,renews_on,status,contact_email
+SYN-001,C100,example.com,Shared Hosting,12,"PKR 2,500",2024-01-15,25/12/2025,Active,alice@example.com
+SYN-002,C101,https://Shop.Example.COM/,VPS,3,"2,500 PKR",15/01/2024,12/25/2025,active,bob@example.com
+SYN-003,C102,www.blog.example.com,Domain Registration,12,Rs. 2500,2024-03-01,2025-11-30,ACTIVE,carol@example.com
+SYN-004,C103,example.org,SSL Certificate,12,2500.00,2024-06-01,2025-06-05,Active,dave@example.com
+SYN-005,C104,messy-site.net,Shared Hosting,12,PKR 1800,2024-02-10,03/04/2025,active,eve@example.com
+SYN-006,C105,bad-date.test,VPS,6,PKR 5000,2024-01-01,31/02/2025,Active,frank@example.com
+SYN-007,C106,refund.example,Shared Hosting,12,(2500),2024-05-01,2025-10-15,Active,grace@example.com
+SYN-008,C107,blank-amt.example,Shared Hosting,12,,2024-04-01,2025-09-01,Active,hank@example.com
+SYN-009,C108,usd-line.example,VPS,12,$45.00 USD,2024-06-01,2025-08-20,Active,iris@example.com
+SYN-010,C109,http://www.messy-domain.co.uk/path,Reseller Hosting,12,"PKR 3,200",2024-07-01,2025-12-01,Active,judy@example.com
+SYN-011,C110,not a domain!!!,Shared Hosting,12,PKR 1000,2024-08-01,2025-08-15,Active,kate@example.com
+SYN-012,C111,dup.example.com,Shared Hosting,12,"PKR 2,000",2024-01-01,2025-09-10,Active,leo@example.com
+SYN-013,C111,dup.example.com,Shared Hosting,12,"PKR 2,000",2024-01-01,2025-09-10,Active,leo@example.com
+SYN-014,C112,conflict.example.com,VPS,6,"PKR 4,000",2024-02-01,2025-08-25,Active,mia@example.com
+SYN-015,C112,conflict.example.com,VPS,6,"PKR 4,500",2024-02-01,2025-08-25,Active,mia@example.com
+SYN-016,C113,cancelled.example,Shared Hosting,12,"PKR 1,500",2024-03-01,2025-08-10,Cancelled,nina@example.com
+SYN-017,C114,suspended.example,VPS,3,"PKR 3,000",2024-04-01,2025-08-18,Suspended,oscar@example.com
+SYN-018,C115,email-bad.example,Shared Hosting,12,"PKR 2,200",2024-05-01,2025-09-05,Active,not-an-email
+SYN-019,C116,email-blank.example,Shared Hosting,12,"PKR 2,100",2024-05-15,2025-09-12,Active,
+SYN-020,,missing-customer.example,Shared Hosting,12,PKR 900,2024-06-01,2025-08-05,Active,pat@example.com
+SYN-021,C117,ok-plain.example,Email Hosting,12,2500,2024-07-01,2025-11-01,Active,quinn@example.com
+SYN-022,C118,negative-sign.example,Shared Hosting,12,-1500,2024-08-01,2025-10-01,Active,rita@example.com
+SYN-023,C119,window-ok.example,Shared Hosting,12,"PKR 4,800",2025-01-10,2026-08-15,Active,sam@example.com
+SYN-024,C120,window-cancel.example,VPS,12,"PKR 6,000",2025-02-01,2026-08-20,Cancelled,tina@example.com
+SYN-025,C121,window-refund.example,Shared Hosting,12,(1200),2025-03-01,2026-08-25,Active,uma@example.com

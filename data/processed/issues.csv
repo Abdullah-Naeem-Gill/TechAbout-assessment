@@ -1,0 +1,69 @@
+record_id,field,raw_value,problem,action_taken
+SYN-001,amount,"PKR 2,500",amount normalised to PKR numeric,set to 2500
+SYN-001,renews_on,25/12/2025,date normalised to ISO,set to 2025-12-25
+SYN-001,status,Active,status casing/wording normalised,set to active
+SYN-002,domain,https://Shop.Example.COM/,domain canonicalised,set to shop.example.com
+SYN-002,amount,"2,500 PKR",amount normalised to PKR numeric,set to 2500
+SYN-002,registered_on,15/01/2024,date normalised to ISO,set to 2024-01-15
+SYN-002,renews_on,12/25/2025,date normalised to ISO,set to 2025-12-25
+SYN-003,domain,www.blog.example.com,domain canonicalised,set to blog.example.com
+SYN-003,amount,Rs. 2500,amount normalised to PKR numeric,set to 2500
+SYN-003,status,ACTIVE,status casing/wording normalised,set to active
+SYN-004,amount,2500.00,amount normalised to PKR numeric,set to 2500
+SYN-004,status,Active,status casing/wording normalised,set to active
+SYN-005,amount,PKR 1800,amount normalised to PKR numeric,set to 1800
+SYN-005,renews_on,03/04/2025,ambiguous slash date (DD/MM vs MM/DD),row dropped; ambiguous dates are not guessed
+SYN-006,amount,PKR 5000,amount normalised to PKR numeric,set to 5000
+SYN-006,renews_on,31/02/2025,impossible calendar date,row dropped
+SYN-006,status,Active,status casing/wording normalised,set to active
+SYN-007,amount,(2500),negative amount treated as refund/credit,kept as negative amount_pkr; excluded from renewal payable totals
+SYN-007,amount,(2500),amount normalised to PKR numeric,set to -2500
+SYN-007,status,Active,status casing/wording normalised,set to active
+SYN-008,amount,,blank amount,row dropped
+SYN-008,status,Active,status casing/wording normalised,set to active
+SYN-009,amount,$45.00 USD,USD amount without authorised PKR conversion,row dropped; USD not converted to PKR
+SYN-009,status,Active,status casing/wording normalised,set to active
+SYN-010,domain,http://www.messy-domain.co.uk/path,domain canonicalised,set to messy-domain.co.uk
+SYN-010,amount,"PKR 3,200",amount normalised to PKR numeric,set to 3200
+SYN-010,status,Active,status casing/wording normalised,set to active
+SYN-011,domain,not a domain!!!,malformed domain,row dropped
+SYN-011,amount,PKR 1000,amount normalised to PKR numeric,set to 1000
+SYN-011,status,Active,status casing/wording normalised,set to active
+SYN-012,amount,"PKR 2,000",amount normalised to PKR numeric,set to 2000
+SYN-012,status,Active,status casing/wording normalised,set to active
+SYN-013,amount,"PKR 2,000",amount normalised to PKR numeric,set to 2000
+SYN-013,status,Active,status casing/wording normalised,set to active
+SYN-014,amount,"PKR 4,000",amount normalised to PKR numeric,set to 4000
+SYN-014,status,Active,status casing/wording normalised,set to active
+SYN-015,amount,"PKR 4,500",amount normalised to PKR numeric,set to 4500
+SYN-015,status,Active,status casing/wording normalised,set to active
+SYN-016,amount,"PKR 1,500",amount normalised to PKR numeric,set to 1500
+SYN-016,status,Cancelled,status casing/wording normalised,set to cancelled
+SYN-016,status,Cancelled,service is cancelled,kept in clean.csv; excluded from renewal payable totals
+SYN-017,amount,"PKR 3,000",amount normalised to PKR numeric,set to 3000
+SYN-017,status,Suspended,status casing/wording normalised,set to suspended
+SYN-017,status,Suspended,service is suspended,kept in clean.csv; excluded from renewal payable totals
+SYN-018,amount,"PKR 2,200",amount normalised to PKR numeric,set to 2200
+SYN-018,status,Active,status casing/wording normalised,set to active
+SYN-018,contact_email,not-an-email,malformed email,cleared; row kept if otherwise valid
+SYN-019,amount,"PKR 2,100",amount normalised to PKR numeric,set to 2100
+SYN-019,status,Active,status casing/wording normalised,set to active
+SYN-019,contact_email,,blank email,left blank; row kept if otherwise valid
+SYN-020,customer_id,,missing customer_id,row dropped
+SYN-020,amount,PKR 900,amount normalised to PKR numeric,set to 900
+SYN-020,status,Active,status casing/wording normalised,set to active
+SYN-021,status,Active,status casing/wording normalised,set to active
+SYN-022,amount,-1500,negative amount treated as refund/credit,kept as negative amount_pkr; excluded from renewal payable totals
+SYN-022,status,Active,status casing/wording normalised,set to active
+SYN-023,amount,"PKR 4,800",amount normalised to PKR numeric,set to 4800
+SYN-023,status,Active,status casing/wording normalised,set to active
+SYN-024,amount,"PKR 6,000",amount normalised to PKR numeric,set to 6000
+SYN-024,status,Cancelled,status casing/wording normalised,set to cancelled
+SYN-024,status,Cancelled,service is cancelled,kept in clean.csv; excluded from renewal payable totals
+SYN-025,amount,(1200),negative amount treated as refund/credit,kept as negative amount_pkr; excluded from renewal payable totals
+SYN-025,amount,(1200),amount normalised to PKR numeric,set to -1200
+SYN-025,status,Active,status casing/wording normalised,set to active
+SYN-013,duplicate,"SYN-012, SYN-013",identical duplicate of customer=C111 domain=dup.example.com service=shared hosting renews_on=2025-09-10,merged into SYN-012
+SYN-012,duplicate,"SYN-012, SYN-013",identical duplicates merged,kept SYN-012; dropped 1 duplicate(s)
+SYN-014,amount_pkr,4000,"duplicate identity with conflicting amounts (4000, 4500)",row dropped; conflicting duplicates are not silently resolved
+SYN-015,amount_pkr,4500,"duplicate identity with conflicting amounts (4000, 4500)",row dropped; conflicting duplicates are not silently resolved
